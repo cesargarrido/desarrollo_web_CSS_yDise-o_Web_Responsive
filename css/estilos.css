@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../font/DancingScript-Regular.otf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Dancing Script';
+    background-color: #01010a;
+    font-size: 1em;
+    text-align: center;
+}
+
+.contenido{
+    margin: 0 auto;
+    width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+header, div, section, article, figure, footer{
+    box-sizing: border-box;
+	
+}
+
+header{
+    width: 100%;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0 0;
+    animation: slidein 1s;
+}
+
+@keyframes slidein{
+    0%{
+        margin-top: 150%;
+    }
+    60%{
+        margin-top: -5%;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.titulo, .menu{
+    width: 100%;
+    padding: 1rem;
+}
+
+.titulo h1{
+    color: white;
+    text-shadow: 2px 2px #02010a;
+}
+
+.menu li{
+    display: inline;
+    margin: 1rem;
+}
+
+.menu a{
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.menu .actual{
+    text-decoration: none;
+}
+
+.img-principal{
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #82c3a6;
+}
+
+.img-principal img{
+    width: 100%;
+}
+
+.img-secundaria{
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #d5c75f;
+    
+}
+
+.img-secundaria .imgS1{
+    width: 100%;
+    border: 1px solid black;
+    transition: transform, 1s;
+}
+
+.img-secundaria .imgS1:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+}
+
+.img-secundaria .imgS2{
+    width: 100%;
+    border: 1px solid black;
+    transition: transform, 1s;
+}
+
+.img-secundaria .imgS2:hover{
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px #82c3a6;
+}
+
+.retratos{
+    background-color: #d5c75f;
+    padding: .5rem 1rem;
+}
+
+.retratos img{
+    width: 100%;
+}
+
+.paisajes{
+    background-color: #d5c75f;
+    padding: .5rem 1rem;
+}
+
+.paisajes img{
+    width: 100%;
+}
+
+figcaption{
+    font-size: 1rem;
+}
+
+figcaption a{
+    color: black;
+}
+
+.img1 {
+    filter: blur(10px);
+}
+
+.img2, .img4, .img6{
+    filter: grayscale(100%);
+}
+
+.img3{
+    filter: sepia(90%);
+}
+
+footer{
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.pie{
+    width: 100%;
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+.pie h4{
+    font-size: 1.2rem;
+}
+
+.pie p{
+    font-size: 0.8rem;
+}
+
+.pie p img{
+    width: 1rem;
+}
+
+@media (min-width: 940px) {
+    .contenido{
+        margin: 0 auto;
+        width: 900px;
+    }
+
+    .titulo, .menu{
+        width: 50%;
+        height: 4rem;
+        float: left;
+    }
+
+    .titulo{
+        text-align: left;
+    }
+
+    .menu{
+        text-align: right;
+    }
+
+    .img-secundaria{
+        width: 50%;
+        float: left;
+    }
+
+    .pie{
+        width: 25%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin: 0;
+    }
+
+    .paisajes{
+        width: 33.33%;
+        float: left;
+    }
+
+    .retratos{
+        width: 33.33%;
+        float: left;
+    }
+}
